@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AES Encryption Tool</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(
+                135deg,
+                #0f2027,
+                #203a43,
+                #2c5364
+            );
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        .container {
+
+            width: 850px;
+            max-width: 100%;
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+
+            text-align: center;
+
+            margin-top: 0;
+
+            color: #173f2b;
+        }
+
+        .subtitle {
+
+            text-align: center;
+
+            color: #666;
+
+            margin-bottom: 30px;
+        }
+
+        label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-top: 20px;
+
+            margin-bottom: 8px;
+        }
+
+        textarea,
+        input {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        textarea {
+
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+        textarea:focus,
+        input:focus {
+
+            border-color: #198754;
+        }
+
+        .buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        button {
+
+            flex: 1;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .encrypt {
+
+            background: #198754;
+        }
+
+        .decrypt {
+
+            background: #0d6efd;
+        }
+
+        button:hover {
+
+            opacity: 0.85;
+        }
+
+        .result {
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #f5f5f5;
+
+            border-radius: 10px;
+
+            word-break: break-all;
+        }
+
+        .result-title {
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        .error {
+
+            margin-top: 20px;
+
+            padding: 15px;
+
+            background: #ffe5e5;
+
+            color: #b00020;
+
+            border-radius: 8px;
+        }
+
+        .info {
+
+            margin-top: 25px;
+
+            padding: 15px;
+
+            background: #eaf7ef;
+
+            border-left: 5px solid #198754;
+
+            border-radius: 5px;
+
+            color: #333;
+        }
+
+        footer {
+
+            text-align: center;
+
+            margin-top: 25px;
+
+            color: #777;
+
+            font-size: 13px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>🔐 AES Encryption Tool</h1>
+
+    <div class="subtitle">
+
+        Công cụ mã hóa và giải mã AES bằng Python
+
+    </div>
+
+
+    <form method="POST">
+
+        <label>
+            Khóa AES
+        </label>
+
+        <input
+            type="text"
+            name="key"
+            placeholder="Nhập khóa 16, 24 hoặc 32 ký tự"
+            required
+        >
+
+
+        <label>
+            Bản rõ
+        </label>
+
+        <textarea
+            name="plaintext"
+            placeholder="Nhập nội dung cần mã hóa..."
+        ></textarea>
+
+
+        <label>
+            Bản mã
+        </label>
+
+        <textarea
+            name="ciphertext"
+            placeholder="Nhập bản mã cần giải mã..."
+        ></textarea>
+
+
+        <div class="buttons">
+
+            <button
+                class="encrypt"
+                type="submit"
+                name="mode"
+                value="encrypt">
+
+                🔒 MÃ HÓA
+
+            </button>
+
+
+            <button
+                class="decrypt"
+                type="submit"
+                name="mode"
+                value="decrypt">
+
+                🔓 GIẢI MÃ
+
+            </button>
+
+        </div>
+
+    </form>
+
+
+    {% if error %}
+
+    <div class="error">
+
+        {{ error }}
+
+    </div>
+
+    {% endif %}
+
+
+    {% if result %}
+
+    <div class="result">
+
+        <div class="result-title">
+
+            Kết quả:
+
+        </div>
+
+        {{ result }}
+
+    </div>
+
+    {% endif %}
+
+
+    <div class="info">
+
+        <b>Thông tin AES:</b>
+
+        <br><br>
+
+        AES-128: khóa 16 ký tự
+
+        <br>
+
+        AES-192: khóa 24 ký tự
+
+        <br>
+
+        AES-256: khóa 32 ký tự
+
+    </div>
+
+
+    <footer>
+
+        Bài thực hành môn An toàn và bảo mật thông tin
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>
