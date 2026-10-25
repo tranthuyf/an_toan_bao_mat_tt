@@ -1,0 +1,15 @@
+E:\thiet_ke_web\App.AES\App.AES\bin\Debug\net10.0\App.AES.exe
+E:\thiet_ke_web\App.AES\App.AES\bin\Debug\net10.0\App.AES.deps.json
+E:\thiet_ke_web\App.AES\App.AES\bin\Debug\net10.0\App.AES.runtimeconfig.json
+E:\thiet_ke_web\App.AES\App.AES\bin\Debug\net10.0\App.AES.dll
+E:\thiet_ke_web\App.AES\App.AES\bin\Debug\net10.0\App.AES.pdb
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.GeneratedMSBuildEditorConfig.editorconfig
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.AssemblyInfoInputs.cache
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.AssemblyInfo.cs
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.csproj.CoreCompileInputs.cache
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.dll
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\refint\App.AES.dll
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.pdb
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.genruntimeconfig.cache
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\ref\App.AES.dll
+E:\thiet_ke_web\App.AES\App.AES\obj\Debug\net10.0\App.AES.csproj.Up2Date
